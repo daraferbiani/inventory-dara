@@ -51,7 +51,7 @@ Route::get('/cekbilangan/{bilangan}', function ($bilangan) {
 
     
 Route::get('/deretbilangan/{bilangan}', function ($bilangan) {
-        for ($i = 0; $i <= $bilangan $i++){
+        for ($i = 0; $i <= $bilangan; $i++){
             if($i % 2 == 0){
                 echo "{$i} genap";
                 echo "</br>";
@@ -61,4 +61,8 @@ Route::get('/deretbilangan/{bilangan}', function ($bilangan) {
             }
             
         }
-    });
+    }
+);
+Route :: get('/person', "PersonController@index");
+Route:: get('/person/add', 'PersonController@add');
+Route:: get('/person/addProcess', 'PersonContoller@addProcess');
